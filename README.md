@@ -10,10 +10,8 @@ This API provides various endpoints for managing users and captains, as well as 
 
 - **JWT Authentication** is required for most endpoints (e.g., login, profile, and ride-related operations).
 - To authenticate, include the JWT token in the Authorization header of your requests:
-Authorization: Bearer <token>
 
-yaml
-Copy
+
 
 ---
 
@@ -53,16 +51,15 @@ HTTP Method: POST
 
 Request Body: JSON format containing:
 
-json
-Copy
+
+
 {
   "email": "string",
   "password": "string"
 }
 Response:
 
-json
-Copy
+
 {
   "user": {
     "fullname": {
@@ -79,8 +76,7 @@ Description: Retrieves the profile information of the authenticated user.
 HTTP Method: GET
 Authentication: Requires a valid JWT token in the Authorization header.
 Response:
-json
-Copy
+
 {
   "user": {
     "fullname": {
@@ -95,8 +91,7 @@ Description: Logs out the current user and blacklists the token.
 HTTP Method: GET
 Authentication: Requires a valid JWT token in the Authorization header or cookie.
 Response:
-json
-Copy
+
 {
   "message": "Logout successfully."
 }
@@ -107,8 +102,7 @@ HTTP Method: POST
 
 Request Body: JSON format containing:
 
-json
-Copy
+
 {
   "fullname": {
     "firstname": "string",
@@ -125,8 +119,7 @@ Copy
 }
 Response:
 
-json
-Copy
+
 {
   "captain": {
     "fullname": {
@@ -150,8 +143,7 @@ HTTP Method: POST
 
 Request Body: JSON format containing:
 
-json
-Copy
+
 {
   "email": "string",
   "password": "string"
@@ -181,8 +173,7 @@ Description: Retrieves the profile information of the authenticated captain.
 HTTP Method: GET
 Authentication: Requires a valid JWT token in the Authorization header.
 Response:
-json
-Copy
+
 {
   "captain": {
     "fullname": {
@@ -203,8 +194,7 @@ Description: Logs out the current captain and blacklists the token.
 HTTP Method: GET
 Authentication: Requires a valid JWT token in the Authorization header or cookie.
 Response:
-json
-Copy
+
 {
   "message": "Logout successfully."
 }
@@ -218,8 +208,6 @@ Request Parameters:
 address: The address for which to retrieve coordinates (required).
 Example Request:
 
-sql
-Copy
 GET /maps/get-coordinates?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA
 Example Response:
 
@@ -240,13 +228,11 @@ origin: The starting address or location (required).
 destination: The destination address or location (required).
 Example Request:
 
-sql
-Copy
+
 GET /maps/get-distance-time?origin=New+York,NY&destination=Los+Angeles,CA
 Example Response:
 
-json
-Copy
+
 {
   "distance": {
     "text": "2,789 miles",
@@ -267,8 +253,7 @@ Request Parameters:
 input: The input string for which to retrieve suggestions (required).
 Example Request:
 
-sql
-Copy
+
 GET /maps/get-suggestions?input=1600+Amphitheatre
 Example Response:
 
@@ -287,8 +272,7 @@ Authentication: Requires a valid JWT token in the Authorization header.
 
 Request Body: JSON format containing:
 
-json
-Copy
+
 {
   "pickup": "string",
   "destination": "string",
@@ -296,8 +280,6 @@ Copy
 }
 Response:
 
-json
-Copy
 {
   "ride": {
     "user": "string",
@@ -323,13 +305,11 @@ pickup: The pickup address (required).
 destination: The destination address (required).
 Example Request:
 
-sql
-Copy
+
 GET /rides/get-fare?pickup=1600+Amphitheatre+Parkway,+Mountain+View,+CA&destination=1+Infinite+Loop,+Cupertino,+CA
 Example Response:
 
-json
-Copy
+
 {
   "auto": 50.0,
   "car": 75.0,
@@ -350,8 +330,7 @@ Each endpoint may return standard HTTP error codes, such as:
 500 Internal Server Error: If there is an error processing the request.
 Error responses will include a message indicating the issue, such as:
 
-json
-Copy
+
 {
   "message": "Error message"
 }
