@@ -32,7 +32,7 @@ This API provides various endpoints for managing users and captains, as well as 
 }
 Response:
 json
-Copy
+
 {
   "user": {
     "fullname": {
@@ -150,8 +150,7 @@ Request Body: JSON format containing:
 }
 Response:
 
-json
-Copy
+
 {
   "captain": {
     "fullname": {
@@ -211,8 +210,7 @@ Example Request:
 GET /maps/get-coordinates?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA
 Example Response:
 
-json
-Copy
+
 {
   "ltd": 37.4224764,
   "lng": -122.0842499
@@ -257,8 +255,7 @@ Example Request:
 GET /maps/get-suggestions?input=1600+Amphitheatre
 Example Response:
 
-json
-Copy
+
 [
   "1600 Amphitheatre Parkway, Mountain View, CA, USA",
   "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA"
