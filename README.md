@@ -500,11 +500,11 @@ OpenRouteService: For calculating distance and estimated travel time.
   "message": "Error message"
 }
 ```
-# Backend API Documentation
+# Frontend API Documentation
 
 ## Overview
 
-This is the frontend application for the **Uber Clone**, built with the **MERN stack** (MongoDB, Express, React, Node.js). It allows users to log in, book a ride, and get location suggestions from the backend, while drivers can accept or reject ride requests.
+This is the frontend application for the **RideXpress**, built with the **MERN stack** (MongoDB, Express, React, Node.js). It allows users to log in, book a ride, and get location suggestions from the backend, while drivers can accept or reject ride requests.
 
 ---
 
